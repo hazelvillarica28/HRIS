@@ -1,8 +1,33 @@
 ﻿@{
     ViewData["Title"] = "Home Page";
+
+    // 1. Logic Layer
+    decimal hourlyRate = 116.28m; // Example hourly rate
+    double regularHors = 80;
+    double overtimeHours = 20;
+
+    // 2. Business Rules
+    decimal basicPay = (decimal)regularHors * hourlyRate;
+    decimal otRate = hourlyRate * 1.25m;
+    decimal otPay = (decimal)overtimeHours * otRate;
+
+    decimal grossPay = basicPay + otPay;
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<div class="container mt-5">
+    <div class="card shadow-sm p-5 m-0 m-auto max-w-[500px] border border-green-900">
+        <div class="card-header bg-dark text-white">
+            <h5 class="mb-0">Payroll Logic Proof-of Concept</h5>
+        </div>
+        <div class="card-body">
+            <p><strong>Hourly Rate:</strong> @hourlyRate.ToString("N2")</p>
+            <p><strong>Regular Hours:</strong> @regularHors hrs</p>
+            <p><strong>OT Hours: </strong> @overtimeHours hrs</p>
+            <hr />
+            <p><strong>Basic Pay:</strong> @basicPay</p>
+            <p><strong>Ot Pay:</strong> @otPay.ToString("N2")</p>
+            <p class="text-green-900"><strong>Gross Pay:</strong> @grossPay.ToString("N2")</p>
+        </div>
+    </div>
+
 </div>

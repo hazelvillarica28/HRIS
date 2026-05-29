@@ -5,15 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - HRIS</title>
     <script type="importmap"></script>
-    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
-    <link rel="stylesheet" href="~/HRIS.styles.css" asp-append-version="true" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    @* <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" /> *@
+    @* <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" /> *@
+    @* <link rel="stylesheet" href="~/HRIS.styles.css" asp-append-version="true" /> *@
 </head>
 <body>
-    <header>
+    <header class="flex">
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container-fluid">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">HRIS</a>
+            <div class="container-fluid flex justify-even">
+                <a>
+                    <img 
+                        src="http://www.bridgesframework.com/wp-content/uploads/2022/11/Bridges-Framework.png" 
+                        alt="Bridges Framework Logo"
+                        class="w-60 h-auto"
+                    />
+                </a>
+                <a class="navbar-brand text-base" asp-area="" asp-controller="Home" asp-action="Index">HRIS</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -32,7 +40,7 @@
         </nav>
     </header>
     <div class="container">
-        <main role="main" class="pb-3">
+        <main role="main" class="pb-3 h-screen max-h-md overflow-hidden">
             @RenderBody()
         </main>
     </div>
