@@ -1,0 +1,6 @@
+<Solution>
+  <Project Path="HRIS.BLL/HRIS.BLL.csproj" Id="407f94c9-66ae-414c-9b86-605f13d3b3ba" />
+  <Project Path="HRIS.DAL/HRIS.DAL.csproj" Id="a9bfcd92-5a01-4141-ab6d-e7c197d8697e" />
+  <Project Path="HRIS.Models/HRIS.Models.csproj" Id="4801d842-f459-4545-826e-e72825cdb338" />
+  <Project Path="HRIS/HRIS.Web.csproj" />
+</Solution>
